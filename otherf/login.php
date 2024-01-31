@@ -13,11 +13,13 @@ if (isset($_POST['email']) && isset($_POST['password'])){
         header('location: ../login.form.php?/=email-required');
     }elseif(empty($password)){
         header('location: ../login.form.php?/=password-required');
-    }else{
+    }
+    else {
+    
         $sql = "SELECT * FROM profiles WHERE email = '$email' && password = '$password'";
         $query = mysqli_query($con, $sql);
 
-        if(mysqli_num_rows($query) === 1){
+        if(mysqli_num_rows($query) > 0){
             $row = mysqli_fetch_assoc($query);
 
             if($row['email'] == $email && $row['password'] == $password){

@@ -23,6 +23,7 @@ if (isset($_POST['submit'])) {
      $targetDir = "img/";
      $targetFile = $targetDir . basename($_FILES["image"]["name"]);
      $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+     
 
     //  // Check if the file already exists
      if (file_exists($targetFile)) {

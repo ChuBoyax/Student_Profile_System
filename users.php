@@ -83,17 +83,17 @@ if (isset($_GET['/'])) {
                     <div class="container mt-2">
                     <div class="text-center">
                         <div class="alert alert-info <?php echo($er == "deleted" ? 'd-block' : 'd-none') ?>" role="alert" id="deleteAlert">
-                            Na delete na
+                            Deleted Successfully
                         </div>
                     </div>
                     <div class="text-center">
                         <div class="alert alert-info <?php echo($er == "UpdateSuccessfully" ? 'd-block' : 'd-none') ?>" role="alert" id="updateAlert">
-                            Na update na ouy atay kaba!!!
+                            Updated Successfully
                         </div>
                     </div>
                     <div class="text-center">
                         <div class="alert alert-info <?php echo($er == "StudentAddSuccessfully" ? 'd-block' : 'd-none') ?>" role="alert" id="addAlert">
-                            Na add na buset man diay ko!!!!!
+                            Added Successfully
                         </div>
                     </div>
 
