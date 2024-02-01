@@ -21,6 +21,19 @@ if(isset($_SESSION['ID']) && isset($_SESSION['email'])){
         background-size:cover;
     
     }
+
+    #log{
+        position:absolute;
+        top:68%;
+        left:45%;
+        
+    }
+    #log a{
+      background-color:rgba(0,0,0,0.3);
+      padding:10px 30px;
+      color:white;
+      box-shadow: 5px 10px 150px 10px skyblue;
+    }
     .dis{
          display:flex;
          align-items:center;
@@ -28,14 +41,16 @@ if(isset($_SESSION['ID']) && isset($_SESSION['email'])){
          position: absolute;
          top:40%;
          left:28%;
-         border:2px solid;
+         border:2px solid skyblue;
          padding:15px;
+         border-radius:10px;
          background-color:rgba(0,0,0,0.3);
+         box-shadow: 5px 1px 150px 10px skyblue;
          
     }
     h1{
         font-size:60px;
-        color:blue;
+        color:white;
     }
   
 .animation-container {
@@ -283,25 +298,108 @@ if(isset($_SESSION['ID']) && isset($_SESSION['email'])){
     
   }
 }
+@media screen and (min-width: 320px) and (max-width: 767px) {
+ body{
+        background:url('img/mche-lee-PC91Jm1DlWA-unsplash.jpg');
+        background-size:cover;
+        background-repeat: no-repeat;   
+        height:80vh;
+        
+ }
+ .dis{
+        display:flex;
+         align-items:center;
+         justify-content:center;
+         position: absolute;
+         top:25%;
+         left:4%;
+         border:2px solid;
+         padding:15px;
+         background-color:rgba(0,0,0,0.3);
+         height:150px;
+         width:200px;
+         border-radius:30px;
+         color:white;
+         box-shadow: 5px 1px 150px 10px skyblue;
+ }
+ h1{
+  text-align:center;
+  color:white;
+  font-size:20px;
+ }
+ #log{
+   position: absolute;
+   top:48%;
+   left:23%;
+  
+ }
+ #log a{
+   padding:10px 30px;
+   color:white;
+   font-size:10px;
+   border:2px solid;
+   border-radius:20px;
+   background-color:rgba(0,0,0,0.3);
+   box-shadow: 5px 1px 150px 10px skyblue;
+ }
+ #nav{
+  display:none;
+ }
+}
 
+@media  screen and (min-width: 768px) and (max-width: 1200px) {
+  body{
+        background:url('img/mche-lee-PC91Jm1DlWA-unsplash.jpg');
+        background-size:cover;
+        background-repeat: no-repeat;   
+        height:80vh;
+        
+ }
+ .dis{
+        display:flex;
+         align-items:center;
+         justify-content:center;
+         position: absolute;
+         top:30%;
+         left:15%;
+         border:2px solid;
+         padding:15px;
+         background-color:rgba(0,0,0,0.3);
+         height:180px;
+         width:400px;
+         border-radius:30px;
+         color:white;
+         box-shadow: 5px 1px 150px 10px skyblue;
+ }
+ h1{
+  text-align:center;
+  color:white;
+  font-size:35px;
+ }
+ #log{
+   position: absolute;
+   top:55%;
+   left:30%;
+  
+ }
+ #log a{
+   padding:20px 60px;
+   color:white;
+   font-size:10px;
+   border:2px solid;
+   border-radius:20px;
+   background-color:rgba(0,0,0,0.3);
+   box-shadow: 5px 1px 150px 10px skyblue;
+ }
+}
 
 </style>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark p-3">
-        <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="index.php">Home</a>
-                    </li>
-                </ul>
-            </div>
-            
-            <div>
+   
+    
+    <div id="log">
                 <a href="login.form.php?/" class="btn btn-info">Login</a>
-            </div>
-        </div>
-    </nav>
+      </div>
   <div class="dis">
     <h1>Student Registration</h1>
   </div>

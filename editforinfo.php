@@ -140,7 +140,7 @@ if(isset($_SESSION['role'])){
             <input type="file"name="image" class="form-control"value="<?php echo $student['image_path'] ?>"required>
         </div>
         <div class="col-12">
-            <button class="btn btn-primary" type="submit"name="submit">Edit</button>
+            <button class="btn btn-primary" type="submit"name="submit">Update</button>
         </div>
     </form>
     <?php
