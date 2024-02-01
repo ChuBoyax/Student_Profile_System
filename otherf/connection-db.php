@@ -1,6 +1,6 @@
 <?php
 
-$servername = 'dfoiwidm';
+$servername = 'localhost';
 $username = 'dfoiwidm_student_profiles';
 $password = 'stdprofilesystem';
 $dbname = 'dfoiwidm_student_profiles';
