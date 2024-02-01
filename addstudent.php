@@ -33,23 +33,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Move the uploaded file to the target directory
     if (move_uploaded_file($_FILES["image"]["tmp_name"], $targetFile)) {
-        // File uploaded successfully
         $imagePath = $targetFile;
 
-        // Insert data into the database
         $sql = "INSERT INTO profiles (role, first_name, middle_name, last_name, address, email, password, gender, civil_status, contact_number, religion, birth_date, image_path)
                 VALUES ('$role', '$firstname', '$middlename', '$lastname', '$address', '$email', '$password', '$gender', '$civilstatus', '$contactnumber', '$religion', '$birthdate', '$imagePath')";
 
         if ($con->query($sql) === TRUE) {
             header("Location: users.php?/=StudentAddSuccessfully");
         } else {
-            // Handle database insertion error
-            // header("Location: admin.php?status=StudentAddError");
+
             echo "Error: " . $sql . "<br>" . $con->error;
         }
     } else {
-        // Handle file upload error
-        // header("Location: admin.php?status=FileUploadError");
         echo "Error uploading file.";
     }
 

@@ -1,7 +1,7 @@
 <?php
 session_start();
 require 'connection-db.php';
-
+require 'defaultuser.php';
 
 if (isset($_POST['email']) && isset($_POST['password'])){
     $email = $_POST['email'];
@@ -15,6 +15,7 @@ if (isset($_POST['email']) && isset($_POST['password'])){
         header('location: ../login.form.php?/=password-required');
     }
     else {
+
     
         $sql = "SELECT * FROM profiles WHERE email = '$email' && password = '$password'";
         $query = mysqli_query($con, $sql);
