@@ -11,7 +11,9 @@ $result = $con->query($checkQuery);
 
 if ($result->num_rows === 0) {
     // Admin user does not exist, insert it into the database
-    $insertQuery = "INSERT INTO profiles (email, password) VALUES ('$adminUsername', '$adminPassword')";
+    $insertQuery = "INSERT INTO profiles (role, first_name, middle_name, last_name, address, email, password, gender, civil_status, contact_number, religion, birth_date, image_path)
+    VALUES (0, 'Boyet', 'A', 'Dedal', 'Brgy. Hindang, Leyte', '$adminUsername', '$adminPassword', 'Male', 'Single', '09123456789', 'Roman Catholic', '2024-02-01', 'img/DSC_0041.JPG
+')";
 
     if ($con->query($insertQuery) === TRUE) {
         echo "Default admin user added successfully.";
