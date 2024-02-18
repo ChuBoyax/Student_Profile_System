@@ -40,9 +40,9 @@ $genderfemale = $con->query($sql);
    }
    .name{
     position: absolute;
-    left:78%;
+    left:40%;
     color:white;
-    font-size:18px;
+    font-size:25px;
    }
    .student i{
     font-size:40px;

@@ -27,16 +27,18 @@ if(isset($_SESSION['role'])){
        margin-top:-70px;
        margin-left:-10px;
     }
-    .nautro{
-        display:flex;
-       align-items:center;
-       margin-top:-160px;
-    }
+   label{
+    font-weight:bold;
+    font-size:20px;
+   }
+    input{
+    text-align:center;
+   }
      .name{
     position: absolute;
-    left:76%;
+    left:40%;
     color:white;
-    font-size:18px;
+    font-size:25px;
    }
 
 </style>
@@ -80,8 +82,17 @@ if(isset($_SESSION['role'])){
                     <a class="list-group-item list-group-item-action list-group-item-light p-3 <?php echo($role == 0 ? 'd-lock' : 'd-none') ?>" href="users.php">Users</a>
                 </div>
             </div>
-            <div class="container-fluid mx-3">
-                    <div class="container mt-5">
+            <div class="container mt-2 col-md-9">
+           
+                    <div class="container mt-1 text-center">
+                    <?php 
+                              $imagePath = $_SESSION['image'];
+                               if (!empty($imagePath)) {
+                               echo '<img src="' . $imagePath . '" alt="Profile Image" style="width: 240px; height: 230px;border-radius:20px;">';
+                                } else {
+                                echo 'No Image';
+                                 }
+                            ?>
                     <form class="row g-3">
                         <div class="col-md-2">
                             <label class="form-label">First name</label>
@@ -114,19 +125,8 @@ if(isset($_SESSION['role'])){
                             <label  class="form-label">Gender</label>
                             <input class="form-control" type="text" value="<?php echo $_SESSION['gender'];?>" aria-label="readonly input example" readonly>
                         </div>
-                        <div class="image">
-                         <div class="text-center">
-                           <?php 
-                              $imagePath = $_SESSION['image'];
-                               if (!empty($imagePath)) {
-                               echo '<img src="' . $imagePath . '" alt="Profile Image" style="width: 270px; height: 250px;border-radius:20px;">';
-                                } else {
-                                echo 'No Image';
-                                 }
-                            ?>
-                          </div>
-                        </div>
-                        <div class="nautro">
+                    
+                       
                             <div class="col-md-2">
                                 <label  class="form-label">Civil Status</label>
                                 <input class="form-control" type="text" value="<?php echo $_SESSION['civilstatus'];?>" aria-label="readonly input example" readonly>
@@ -144,7 +144,7 @@ if(isset($_SESSION['role'])){
                                 <label class="form-label">Birth Date</label>
                                 <input class="form-control" type="text" value="<?php echo $_SESSION['birthdate'];?>" aria-label="readonly input example" readonly>
                             </div>
-                        </div>
+                    
                         <div class="col-12">
                         <a class="btn btn-primary" href="editforinfo.php?id=<?php  echo $_SESSION['ID'];?>">Edit</a>
                         </div>
