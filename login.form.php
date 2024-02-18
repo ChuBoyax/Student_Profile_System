@@ -52,7 +52,7 @@ if(isset($_GET['/'])){
             </div>
             <div class="container mt-4">
                 <div class="d-grid gap-2">                                
-                <button type="button" class="btn btn-success"name="submit">Login</button>
+                <input type="submit" class="btn btn-success" name="submit" value="Login">
                 <a class="btn btn-primary" href="index.php?/">Back</a>           
                 </div>
             </div>
