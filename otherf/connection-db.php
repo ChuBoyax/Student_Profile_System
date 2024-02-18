@@ -1,13 +1,13 @@
 <?php
 
-// $servername = 'localhost';
-// $username = 'dfoiwidm_student_profiles';
-// $password = 'stdprofilesystem';
-// $dbname = 'dfoiwidm_student_profiles';
 $servername = 'localhost';
-$username = 'root';
-$password = '';
-$dbname = 'student_profiles';
+$username = 'dfoiwidm_student_profiles';
+$password = 'stdprofilesystem';
+$dbname = 'dfoiwidm_student_profiles';
+// $servername = 'localhost';
+// $username = 'root';
+// $password = '';
+// $dbname = 'student_profiles';
 
 $con = new mysqli($servername,$username,$password, $dbname);
 
