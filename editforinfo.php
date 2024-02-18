@@ -24,6 +24,7 @@ if(isset($_SESSION['role'])){
     position: absolute;
     left:40%;
     color:white;
+    font-size:25px;
    }
 </style>
 <body>
@@ -139,7 +140,7 @@ if(isset($_SESSION['role'])){
             <label for=""class="form-label">Birthdate</label>
             <input type="file"name="image" class="form-control"value="<?php echo $student['image_path'] ?>"required>
         </div>
-        <div class="col-12">
+        <div class="d-grid gap-2">
             <button class="btn btn-primary" type="submit"name="submit">Update</button>
         </div>
     </form>
