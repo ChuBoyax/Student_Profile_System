@@ -88,7 +88,7 @@ if(isset($_SESSION['role'])){
                     <?php 
                               $imagePath = $_SESSION['image'];
                                if (!empty($imagePath)) {
-                               echo '<img src="' . $imagePath . '" alt="Profile Image" style="width: 240px; height: 230px;border-radius:20px;">';
+                               echo '<img src="' . $imagePath . '" alt="Profile Image" style="width: 210px; height: 200px;border-radius:20px;">';
                                 } else {
                                 echo 'No Image';
                                  }
@@ -145,7 +145,7 @@ if(isset($_SESSION['role'])){
                                 <input class="form-control" type="text" value="<?php echo $_SESSION['birthdate'];?>" aria-label="readonly input example" readonly>
                             </div>
                     
-                        <div class="col-12">
+                        <div class="d-grid gap-2">
                         <a class="btn btn-primary" href="editforinfo.php?id=<?php  echo $_SESSION['ID'];?>">Edit</a>
                         </div>
                         

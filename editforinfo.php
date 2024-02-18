@@ -22,7 +22,7 @@ if(isset($_SESSION['role'])){
 <style>
      .name{
     position: absolute;
-    left:78%;
+    left:40%;
     color:white;
    }
 </style>
